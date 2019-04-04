@@ -1,6 +1,6 @@
 function range(start, end, step) {
   var outputarray = [];
-  if (start == undefined || end == undefined || step == undefined || start > end || step < 0) {
+  if (start === undefined || end === undefined || step === undefined || start > end || step < 0) {
     return outputarray;//return empty array
   } else {
     var repeat = start;
