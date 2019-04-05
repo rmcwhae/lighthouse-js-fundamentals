@@ -1,6 +1,4 @@
 function merge(array1, array2) {
-  var sorted = [];
-  var smallestn = 0;
   for(i = 0; i < array2.length; i++) {
     array1.push(array2[i]);//combine the two arrays
   }
