@@ -7,7 +7,7 @@ function merge(array1, array2) {
     for(var j = i - 1; j > -1 && array1[j] > value; j--) {
       array1[j + 1] = array1[j];
     }
-    array1[j + 1] = value
+    array1[j + 1] = value;
   }
   return array1;
 }
