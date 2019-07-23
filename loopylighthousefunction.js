@@ -1,20 +1,25 @@
-function loopyLighthouse(range, multiples, words) {
-  var firstmultiple = multiples[0];
-  var secondmultiple = multiples[1];
-  var firstword = words[0];
-  var secondword = words[1];
-  for (var i = range[0]; i <= range[1]; i++) {
+let loopyLighthouse = function(range, multiples, words) {
+  let firstmultiple = multiples[0];
+  let secondmultiple = multiples[1];
+  let firstword = words[0];
+  let secondword = words[1];
+  let output = '';
+  for (let i = range[0]; i <= range[1]; i++) {
+    if (i !== range[0]) {
+      output += '\n';//adds newline character
+    }
     if (i % firstmultiple === 0 && i % secondmultiple !== 0) {
-      console.log(firstword);
+      output += firstword;
     } else if (i % secondmultiple === 0 && i % firstmultiple !== 0) {
-      console.log(secondword);
+      output += secondword;
     } else if (i % firstmultiple === 0 && i % secondmultiple === 0) {
-      console.log(firstword + secondword);
+      output += firstword + secondword;
     } else {
-      console.log(i);
+      output += i;
     }
   }
-}
+  return output;
+};
 
-loopyLighthouse([100, 200], [3, 4], ["Loopy", "Lighthouse"]);
-loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]);
+console.log(loopyLighthouse([100, 200], [3, 4], ["Loopy", "Lighthouse"]));
+console.log(loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]));
